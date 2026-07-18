@@ -52,9 +52,6 @@ export function cinemaById(id: string): Cinema {
   return cinema;
 }
 
-export const COMBINED_ICS_FILE = "films.ics";
-export const COMBINED_CALENDAR_NAME = "Kino Frankfurt (OV/OmU)";
-
 export const ARTHOUSE_BASE_URL = "https://www.arthouse-kinos.de";
 export const ARTHOUSE_PROGRAMME_URL = `${ARTHOUSE_BASE_URL}/programm-tickets/`;
 

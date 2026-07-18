@@ -7,8 +7,6 @@ const BUFFER_MINUTES = 15;
 
 export interface IcsOptions {
   calendarName: string;
-  /** Append "@ <Cinema>" to event titles (for the combined calendar) */
-  cinemaInTitle?: boolean;
 }
 
 export function toIcs(screenings: Screening[], options: IcsOptions): string {
@@ -25,7 +23,6 @@ export function toIcs(screenings: Screening[], options: IcsOptions): string {
 
     let summary = s.title;
     if (s.language) summary += ` (${s.language})`;
-    if (options.cinemaInTitle) summary += ` @ ${cinema.name}`;
 
     const description = [
       s.bookingUrl && `Tickets: ${s.bookingUrl}`,

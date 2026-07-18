@@ -2,12 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { scrapeArthouse } from "./cinemas/arthouse.js";
 import { scrapeDff } from "./cinemas/dff.js";
 import { scrapeMalsehn } from "./cinemas/malsehn.js";
-import {
-  CINEMAS,
-  COMBINED_CALENDAR_NAME,
-  COMBINED_ICS_FILE,
-  PAGES_BASE_URL,
-} from "./config.js";
+import { CINEMAS, PAGES_BASE_URL } from "./config.js";
 import { filterScreenings } from "./filter.js";
 import { toIcs } from "./ics.js";
 import type { Screening } from "./types.js";
@@ -72,12 +67,6 @@ async function main() {
   mkdirSync("dist", { recursive: true });
 
   const counts: { name: string; file: string; events: number }[] = [];
-
-  writeFileSync(
-    `dist/${COMBINED_ICS_FILE}`,
-    toIcs(selected, { calendarName: COMBINED_CALENDAR_NAME, cinemaInTitle: true }),
-  );
-  counts.push({ name: COMBINED_CALENDAR_NAME, file: COMBINED_ICS_FILE, events: selected.length });
 
   for (const cinema of CINEMAS) {
     const screenings: Screening[] = selected.filter((s) => s.cinema === cinema.id);
