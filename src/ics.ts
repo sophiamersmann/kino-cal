@@ -23,6 +23,7 @@ export function toIcs(screenings: Screening[], options: IcsOptions): string {
 
     let summary = s.title;
     if (s.language) summary += ` (${s.language})`;
+    if (s.series) summary += ` · ${s.series}`;
 
     const description = [
       s.bookingUrl && `Tickets: ${s.bookingUrl}`,

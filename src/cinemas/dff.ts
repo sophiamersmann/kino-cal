@@ -65,6 +65,8 @@ export function parseDffProgramme(html: string): Screening[] {
       const lengthMatch = infoText.match(/(\d+)\s*Min\./);
       // OF = Originalfassung, Om…U = subtitled original (OmU/OmeU/OmseU/…),
       // DF or "Deutsche Fassung" = dubbed print
+      // "Filmreihe: <name>" is the last line of the info block
+      const series = infoText.match(/Filmreihe:\s*(.+)\s*$/)?.[1]?.trim();
       const langToken = infoText.match(/\b(OF|DF|Om\w*U)\b/g)?.at(-1);
       const dubbed = langToken === "DF" || /Deutsche Fassung/.test(infoText);
       const language = langToken === "OF" ? "OV" : langToken?.startsWith("Om") ? langToken : null;
@@ -78,6 +80,7 @@ export function parseDffProgramme(html: string): Screening[] {
         filmUrl: seriesUrl,
         language,
         dubbed,
+        series,
         lengthMinutes: lengthMatch?.[1] ? Number(lengthMatch[1]) : undefined,
         country: countryMatch?.[1]?.trim(),
       });

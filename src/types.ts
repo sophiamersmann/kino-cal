@@ -13,6 +13,8 @@ export interface Screening {
   language: string | null;
   /** Explicitly marked as a dubbed German version (DF / "Deutsche Fassung") */
   dubbed?: boolean;
+  /** Film series ("Filmreihe") the screening belongs to, e.g. "Wim Wenders" */
+  series?: string;
   lengthMinutes?: number;
   fsk?: string;
   country?: string;

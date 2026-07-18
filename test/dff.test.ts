@@ -30,6 +30,7 @@ describe("parseDffProgramme", () => {
     expect(s!.lengthMinutes).toBe(120);
     expect(s!.bookingUrl).toContain("booking.cinetixx.de");
     expect(s!.filmUrl).toContain("bahram-beyzai");
+    expect(s!.series).toBe("Bahram Beyzai");
     // 18:00 Europe/Berlin on 2026-07-18 (CEST, UTC+2) = 16:00 UTC
     expect(s!.start.toISOString()).toBe("2026-07-18T16:00:00.000Z");
   });
