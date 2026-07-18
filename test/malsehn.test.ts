@@ -46,10 +46,13 @@ describe("parseMalsehnWeek", () => {
 });
 
 describe("parseMalsehnTickets", () => {
-  it("maps datetimes to booking paths", () => {
+  it("maps datetimes to booking paths and cased titles", () => {
     const tickets = parseMalsehnTickets(ticketsHtml);
     expect(tickets.size).toBeGreaterThan(20);
-    expect(tickets.get("18.07|18:00")).toBe("/frankfurt_malsehn/booking/18281");
+    expect(tickets.get("18.07|18:00")).toEqual({
+      bookingPath: "/frankfurt_malsehn/booking/18281",
+      title: "Die Töchter Europas",
+    });
   });
 });
 
@@ -77,27 +80,30 @@ describe("buildScreenings", () => {
   const week = parseMalsehnWeek(weekHtml);
   const tickets = parseMalsehnTickets(ticketsHtml);
 
-  it("attaches booking links by date + time", () => {
+  it("attaches booking links and cased titles by date + time", () => {
     const screenings = buildScreenings(week, tickets, new Set());
     expect(screenings.length).toBe(21);
     expect(screenings.every((s) => s.bookingUrl.includes("/booking/"))).toBe(true);
     expect(screenings.every((s) => s.showId.startsWith("malsehn-"))).toBe(true);
     expect(new Set(screenings.map((s) => s.showId)).size).toBe(21);
+    // ALL-CAPS week title replaced by the kinotickets one
+    expect(screenings[0]!.title).toBe("Die Töchter Europas");
   });
 
-  it("falls back to the generic ticket page when nothing matches", () => {
+  it("falls back to generic ticket page and week title when nothing matches", () => {
     const screenings = buildScreenings(week, new Map(), new Set());
     expect(screenings.length).toBe(21);
     const s = screenings[0]!;
     expect(s.bookingUrl).toBe("https://kinotickets.express/frankfurt_malsehn");
     expect(s.showId).toBe("malsehn-108132-20260718T1800");
+    expect(s.title).toBe("TÖCHTER EUROPAS");
   });
 
   it("excludes Kinderkino screenings by movie id", () => {
     const someId = week[0]!.movieId!;
     const screenings = buildScreenings(week, tickets, new Set([someId]));
     expect(screenings.length).toBeLessThan(21);
-    expect(screenings.every((s) => !s.title.includes("TÖCHTER EUROPAS"))).toBe(true);
+    expect(screenings.every((s) => !/Töchter Europas/i.test(s.title))).toBe(true);
   });
 
   it("passes the selection filter in full (include-all rule for malsehn)", () => {

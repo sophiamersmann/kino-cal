@@ -83,25 +83,38 @@ export function parseMalsehnWeek(html: string): WeekEntry[] {
   return entries;
 }
 
-/** kinotickets.express: map "DD.MM|HH:MM" → booking path (/frankfurt_malsehn/booking/<id>) */
-export function parseMalsehnTickets(html: string): Map<string, string> {
+export interface TicketShow {
+  bookingPath: string;
+  /** Properly cased film title (the week page only has ALL-CAPS titles) */
+  title: string;
+}
+
+/** kinotickets.express: map "DD.MM|HH:MM" → booking path + cased title */
+export function parseMalsehnTickets(html: string): Map<string, TicketShow> {
   const $ = cheerio.load(html);
-  const byDatetime = new Map<string, string>();
+  const byDatetime = new Map<string, TicketShow>();
 
   $("a[href*='/booking/']").each((_, aEl) => {
     const a = $(aEl);
     const href = a.attr("href");
     const timeMatch = a.text().match(/(\d{1,2}):(\d{2})/);
-    // The enclosing <li> holds the date ("Mi" / "22.07.") next to the time links
+    // The innermost <li> holds the date ("Mi" / "22.07.") next to the time
+    // links; the enclosing li[id^=movie-] holds the film title.
     const dateMatch = a
       .closest("li")
       .text()
       .match(/(\d{2})\.(\d{2})\./);
+    const title = a
+      .closest("li[id^='movie-']")
+      .find("div.font-bold.text-primary")
+      .first()
+      .text()
+      .trim();
     if (!href || !timeMatch || !dateMatch) return;
-    byDatetime.set(
-      matchKey(dateMatch[1]!, dateMatch[2]!, `${timeMatch[1]}:${timeMatch[2]}`),
-      href,
-    );
+    byDatetime.set(matchKey(dateMatch[1]!, dateMatch[2]!, `${timeMatch[1]}:${timeMatch[2]}`), {
+      bookingPath: href,
+      title,
+    });
   });
 
   return byDatetime;
@@ -122,7 +135,7 @@ export function parseMalsehnKinderkino(html: string): Set<string> {
 
 export function buildScreenings(
   week: WeekEntry[],
-  bookingByDatetime: Map<string, string>,
+  ticketsByDatetime: Map<string, TicketShow>,
   kinderkinoMovieIds: Set<string>,
 ): Screening[] {
   const byShowId = new Map<string, Screening>();
@@ -135,19 +148,22 @@ export function buildScreenings(
       entry.start.toFormat("MM"),
       entry.start.toFormat("HH:mm"),
     );
-    const bookingPath = bookingByDatetime.get(key);
+    const ticket = ticketsByDatetime.get(key);
     // Booking id when matched; otherwise a synthetic-but-stable fallback
-    const showId = bookingPath
-      ? `malsehn-${bookingPath.split("/").at(-1)}`
+    const showId = ticket
+      ? `malsehn-${ticket.bookingPath.split("/").at(-1)}`
       : `malsehn-${entry.movieId ?? "x"}-${entry.start.toFormat("yyyyMMdd'T'HHmm")}`;
     if (byShowId.has(showId)) continue;
 
     byShowId.set(showId, {
       cinema: "malsehn",
-      title: entry.title,
+      // Prefer the properly cased kinotickets title over the ALL-CAPS one
+      title: ticket?.title || entry.title,
       start: entry.start.toJSDate(),
       showId,
-      bookingUrl: bookingPath ? `https://kinotickets.express${bookingPath}` : MALSEHN_TICKETS_URL,
+      bookingUrl: ticket
+        ? `https://kinotickets.express${ticket.bookingPath}`
+        : MALSEHN_TICKETS_URL,
       language: entry.language,
       lengthMinutes: entry.lengthMinutes,
       country: entry.country,
@@ -170,7 +186,7 @@ export async function scrapeMalsehn(): Promise<Screening[]> {
 
   // Booking links and the Kinderkino section are nice-to-haves — losing
   // them shouldn't lose the screenings themselves.
-  let bookings = new Map<string, string>();
+  let bookings = new Map<string, TicketShow>();
   try {
     bookings = parseMalsehnTickets(await fetchText(MALSEHN_TICKETS_URL));
   } catch (err) {
