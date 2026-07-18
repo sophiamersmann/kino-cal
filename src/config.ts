@@ -30,6 +30,13 @@ export const CINEMAS: Cinema[] = [
     icsFile: "eldorado.ics",
     calendarName: "Eldorado (OV/OmU)",
   },
+  {
+    id: "dff",
+    name: "DFF Kino",
+    address: "Schaumainkai 41, 60596 Frankfurt am Main",
+    icsFile: "dff.ics",
+    calendarName: "DFF Kino (OV/OmU)",
+  },
 ];
 
 export function cinemaById(id: string): Cinema {
@@ -43,5 +50,8 @@ export const COMBINED_CALENDAR_NAME = "Kino Frankfurt (OV/OmU)";
 
 export const ARTHOUSE_BASE_URL = "https://www.arthouse-kinos.de";
 export const ARTHOUSE_PROGRAMME_URL = `${ARTHOUSE_BASE_URL}/programm-tickets/`;
+
+export const DFF_PROGRAMME_URL =
+  "https://www.dff.film/kino/kinoprogramm/aktuelles-kinoprogramm/";
 
 export const PAGES_BASE_URL = "https://sophiamersmann.github.io/kino-cal";

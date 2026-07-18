@@ -2,7 +2,7 @@ import type { Screening } from "./types.js";
 
 export type Predicate = (s: Screening) => boolean;
 
-const GERMAN_SPEAKING_COUNTRY = /\b(Deutschland|Österreich|Schweiz)\b/i;
+const GERMAN_SPEAKING_COUNTRY = /\b(Deutschland|BRD|DDR|Österreich|Schweiz)\b/i;
 
 /** Original version or subtitled (OV/OmU/OmeU). */
 export const isTaggedOriginal: Predicate = (s) => s.language !== null;
@@ -15,6 +15,9 @@ export const isTaggedOriginal: Predicate = (s) => s.language !== null;
  */
 export const isGermanOriginal: Predicate = (s) => {
   if (s.language !== null) return false;
+  // An explicit dub marker (DF / "Deutsche Fassung") beats the country
+  // heuristic — e.g. a German co-production shown as a dubbed print.
+  if (s.dubbed) return false;
   if (s.originalLanguage) return /deutsch/i.test(s.originalLanguage);
   if (s.country) return GERMAN_SPEAKING_COUNTRY.test(s.country);
   return false;

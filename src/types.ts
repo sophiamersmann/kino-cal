@@ -5,12 +5,14 @@ export interface Screening {
   cinema: string;
   title: string;
   start: Date;
-  /** Stable kinoheld show id — used for deduping and as ICS UID */
+  /** Stable ticketing-system show id (unique across cinemas) — used for deduping and as ICS UID */
   showId: string;
   bookingUrl: string;
   filmUrl?: string;
-  /** null = German version (original or dub) */
-  language: Language | null;
+  /** Language tag, e.g. "OV", "OmU", "OmeU", "OmseU"; null = German version (original or dub) */
+  language: string | null;
+  /** Explicitly marked as a dubbed German version (DF / "Deutsche Fassung") */
+  dubbed?: boolean;
   lengthMinutes?: number;
   fsk?: string;
   country?: string;

@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { scrapeArthouse } from "./cinemas/arthouse.js";
+import { scrapeDff } from "./cinemas/dff.js";
 import {
   CINEMAS,
   COMBINED_CALENDAR_NAME,
@@ -42,9 +43,26 @@ function subscribePage(counts: { name: string; file: string; events: number }[])
 }
 
 async function main() {
-  console.log("Scraping arthouse-kinos.de …");
-  const all = await scrapeArthouse();
-  console.log(`  ${all.length} screenings scraped`);
+  const sources = [
+    { name: "arthouse-kinos.de", scrape: scrapeArthouse },
+    { name: "dff.film", scrape: scrapeDff },
+  ];
+
+  console.log(`Scraping ${sources.map((s) => s.name).join(", ")} …`);
+  const results = await Promise.allSettled(sources.map((s) => s.scrape()));
+
+  // One flaky source shouldn't block updates for the others — but if
+  // everything failed, fail the run so the previous deploy stays up.
+  const all: Screening[] = [];
+  results.forEach((result, i) => {
+    if (result.status === "fulfilled") {
+      console.log(`  ${sources[i]!.name}: ${result.value.length} screenings`);
+      all.push(...result.value);
+    } else {
+      console.error(`  ${sources[i]!.name} FAILED: ${result.reason}`);
+    }
+  });
+  if (all.length === 0) throw new Error("All sources failed");
 
   const selected = filterScreenings(all);
   console.log(`  ${selected.length} screenings after filtering`);
