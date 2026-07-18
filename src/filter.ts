@@ -30,9 +30,23 @@ export function anyOf(...predicates: Predicate[]): Predicate {
 /** The selection rule: originals with(out) subs, plus German-language originals. */
 export const defaultFilter: Predicate = anyOf(isTaggedOriginal, isGermanOriginal);
 
+export const includeAll: Predicate = () => true;
+
+/**
+ * Per-cinema overrides. Mal Seh'n shows everything in OV/OmU but rarely
+ * annotates the language, so the default untagged-foreign-film exclusion
+ * would wrongly drop subtitled originals there.
+ */
+const CINEMA_FILTERS: Record<string, Predicate> = {
+  malsehn: includeAll,
+};
+
+export const selectionFilter: Predicate = (s) =>
+  (CINEMA_FILTERS[s.cinema] ?? defaultFilter)(s);
+
 export function filterScreenings(
   screenings: Screening[],
-  predicate: Predicate = defaultFilter,
+  predicate: Predicate = selectionFilter,
 ): Screening[] {
   return screenings.filter(predicate);
 }

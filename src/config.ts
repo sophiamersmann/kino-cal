@@ -37,6 +37,13 @@ export const CINEMAS: Cinema[] = [
     icsFile: "dff.ics",
     calendarName: "DFF Kino (OV/OmU)",
   },
+  {
+    id: "malsehn",
+    name: "Mal Seh'n",
+    address: "Adlerflychtstraße 6, 60318 Frankfurt am Main",
+    icsFile: "malsehn.ics",
+    calendarName: "Mal Seh'n (OV/OmU)",
+  },
 ];
 
 export function cinemaById(id: string): Cinema {
@@ -53,5 +60,10 @@ export const ARTHOUSE_PROGRAMME_URL = `${ARTHOUSE_BASE_URL}/programm-tickets/`;
 
 export const DFF_PROGRAMME_URL =
   "https://www.dff.film/kino/kinoprogramm/aktuelles-kinoprogramm/";
+
+export const MALSEHN_BASE_URL = "https://malsehnkino.de";
+export const MALSEHN_WEEK_URL = `${MALSEHN_BASE_URL}/index.php?section=week`;
+export const MALSEHN_KINDERKINO_URL = `${MALSEHN_BASE_URL}/index.php?section=Kinderkino`;
+export const MALSEHN_TICKETS_URL = "https://kinotickets.express/frankfurt_malsehn";
 
 export const PAGES_BASE_URL = "https://sophiamersmann.github.io/kino-cal";

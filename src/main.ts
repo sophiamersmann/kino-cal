@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { scrapeArthouse } from "./cinemas/arthouse.js";
 import { scrapeDff } from "./cinemas/dff.js";
+import { scrapeMalsehn } from "./cinemas/malsehn.js";
 import {
   CINEMAS,
   COMBINED_CALENDAR_NAME,
@@ -46,6 +47,7 @@ async function main() {
   const sources = [
     { name: "arthouse-kinos.de", scrape: scrapeArthouse },
     { name: "dff.film", scrape: scrapeDff },
+    { name: "malsehnkino.de", scrape: scrapeMalsehn },
   ];
 
   console.log(`Scraping ${sources.map((s) => s.name).join(", ")} …`);

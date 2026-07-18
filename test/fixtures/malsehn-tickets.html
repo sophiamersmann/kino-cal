@@ -1,0 +1,1336 @@
+
+
+
+<!DOCTYPE html>
+<html lang="de" translate="no" dir="ltr">
+<head>
+    
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+<meta name="google" content="notranslate">
+<meta name="turbo-cache-control" content="no-cache">
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="CfDJ8OLZqzg4kppJvsamaV-xsX6GtF60T0s5hi9fQ9qaRPzcfJTjrePxHYhHQxZFsB6bqSxgjpN5RGFFu-3xvWZ0092v9rZ5zY-2FgHKg4TwehmI7kBpmJchCmTGU1MhpK0ZIJGD5LBgGZd7R3Llx_TTD1I"/>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<title>
+                 KinoTickets: Programm
+</title>
+
+
+<style>
+    :root {
+        --kt-color-cinema: 255, 255, 255;
+        --kt-color-cinema-dark: 242, 242, 242;
+        --kt-color-primary: 0, 0, 0;
+        --kt-color-primary-dark: 64, 63, 63;
+
+        --kt-color-cinema-text: 0, 0, 0;
+        --kt-color-primary-text: 255, 255, 255;
+        --kt-color-seat-kind-1: 180, 83, 9;
+        --kt-color-seat-kind-2: 4, 120, 87;
+        --kt-color-seat-kind-3: 29, 78, 216;
+        --kt-color-seat-kind-4: 67, 56, 202;
+        --kt-color-seat-kind-5: 109, 40, 217;
+        --kt-color-seat-kind-love: 190, 24, 93;
+        --kt-color-seat-kind-reserved: 127, 29, 29;
+
+        --kt-checkmark: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ><path stroke="rgb(0, 0, 0" fill="rgb(0, 0, 0" d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>');
+    }
+</style>
+
+
+<link rel="stylesheet" href="/dist/kino.main.css?v=gupXrjnFhlOzKzDATDoFsFhg01rwOAH6bQveP83L70k">
+
+<script type="text/javascript">
+//<![CDATA[
+var __jsnlog_configure = function (JL) {
+JL.setOptions({"clientIP": "92.209.187.123",
+"requestId": "0HNN27U5CNIRB:00000039",
+"enabled": true,
+"maxMessages": 5});
+}; try { __jsnlog_configure(JL); } catch(e) {};
+//]]>
+</script>
+<script type="text/javascript" src="/lib/jsnlog-2.30.0.min.js"></script>
+
+
+
+
+
+  <script type="module" src="/dist/app.main.js?v=S60BON0TjKPtcyGCMoB_-0o_cJcte9xc1CblI1ZQsek" crossorigin data-turbo-eval="false" defer></script>
+
+
+
+
+
+
+
+    <script defer src="https://glutamate.marsedv.de/script.js"
+            data-website-id="8475bc48-a075-4f16-b7b5-461f646144d3"
+            data-before-send="umamiBeforeSend"
+            data-tag="website"></script>
+
+
+
+
+    
+</head>
+
+<body class=" bg-gray-100 flex flex-col min-h-screen notranslate">
+
+
+    <header class="print:hidden bg-cinema">
+        <div class="md:mx-auto md:container lg:max-w-screen-xl">
+            
+
+
+
+<div class="text-cinema-text fixed top-0 left-0 right-0 bg-cinema z-50">
+    <div class="md:mx-auto md:container lg:max-w-screen-xl pt-2 px-2 sm:px-4"
+         data-controller="reveal"
+         data-reveal-hidden-class="hidden">
+        <div class="flex items-center">
+
+            <div class="flex-none hidden sm:flex mr-auto min-w-0">
+                    <div class="truncate">Mal Seh&#x27;n Kino e.V.</div>
+            </div>
+
+                <a class="flex-none btn-menu" href="/frankfurt_malsehn/vouchers">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                    <span class="hidden lg:block">Gutschein-Shop</span>
+                </a>
+
+
+                <a class="flex-none btn-menu" href="/frankfurt_malsehn/movies">
+                    <svg class="h-6 w-6 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                    </svg>
+                    <span class="hidden lg:inline">Programm</span>
+                </a>
+
+            <div class="relative inline-flex max-w-max mr-4">
+                <div class="right-2 left-auto top-2 bottom-auto translate-x-1/2 -translate-y-1/2 absolute transform whitespace-nowrap pointer-events-none">
+                    
+
+<div id="__concession-cart_partial">
+    <div class="flex items-center relative">
+        <div class="inline-flex items-center px-2 py-0.5 rounded-full text-sm font-bold bg-primary text-primary-text">
+            0
+        </div>
+
+    </div>
+
+
+</div>
+
+                </div>
+                <a class="flex-none btn-menu" id="__concession-basket_icon" href="/frankfurt_malsehn/sale/cartcontent">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                </a>
+            </div>
+
+             <button class="ml-auto sm:ml-0 flex-none hover:bg-cinema-dark focus:outline-none w-8 h-8 border border-cinema-text p-1"
+                    data-action="click->reveal#toggle">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+        </div>
+
+        <nav class="flex flex-col items-end hidden sm:mr-4"
+             data-reveal-target="item">
+
+            <div class="mb-4 flex space-x-2 p-2">
+                    <div class="truncate">Mal Seh&#x27;n Kino e.V.</div>
+            </div>
+
+                <div class="flex items-center space-x-2 text-sm p-2">
+                    <a class="font-bold" data-turbo="false" href="/culture/switch?culture=de&amp;returnUrl=%2Ffrankfurt_malsehn&amp;cinema=frankfurt_malsehn">DE</a>
+                    <span class="text-cinema-text/50">|</span>
+                    <a class="" data-turbo="false" href="/culture/switch?culture=en&amp;returnUrl=%2Ffrankfurt_malsehn&amp;cinema=frankfurt_malsehn">EN</a>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" /></svg>
+                </div>
+
+
+                <a class="btn-menu" href="/frankfurt_malsehn/vouchers">
+                    <div class="min-w-0 truncate">Gutschein-Shop (PDF-Onlineversand)</div>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                </a>
+
+
+
+
+                <a class="btn-menu mb-4" href="/frankfurt_malsehn/movies">
+                   <div class="min-w-0 truncate">Programm</div>
+                    <svg class="flex-none h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                    </svg>
+                </a>
+
+
+            <a class="btn-menu" href="/frankfurt_malsehn/sale/cartcontent">
+               <div class="min-w-0 truncate">Warenkorb</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+            </a>
+
+
+                <a class="btn-menu" href="/frankfurt_malsehn/auth/login?returnUrl=%2Ffrankfurt_malsehn">
+                   <div class="min-w-0 truncate">Anmelden</div>
+                    <svg class="h-6 w-6 transform rotate-180 inline stroke-current stroke-2"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/>
+                        <path d="M20 12h-13l3 -3m0 6l-3 -3"/>
+                    </svg>
+                </a>
+        </nav>
+
+        <hr class="my-2"/>
+    </div>
+
+</div>
+
+
+            <div class="mx-4 pt-[4.5rem]">
+
+                <div class="flex flex-col sm:flex-row">
+                    
+
+<div class="sm:w-1/3 mb-4 sm:mb-0 sm:mr-8 hidden sm:block">
+        <a class="sm:w-8/12 block" href="http://www.malsehnkino.de/index.php">
+            <img class="rounded-lg"
+                 src="/frankfurt_malsehn/assets/logo"
+                 alt="Kino logo"/>
+        </a>
+</div>
+
+
+                    <div class="sm:w-2/3">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <svg class="block bg-white sm:bg-gray-100 fill-cinema text-gray-100 "
+                 viewBox="0 0 1000 25"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M439 17 611 5c132-7 268-3 393 12V0H0v5l4 1c35 4 127 14 159 16 101 7 175 1 276-5Z"/>
+            </svg>
+        </div>
+        <div class="h-4 bg-white sm:bg-gray-100"></div>
+
+    </header>
+
+
+<main class="flex-1 native:h-screen native:flex-auto flex flex-col md:mx-auto md:container lg:max-w-screen-xl">
+
+
+
+    <div class="native:h-full native:overflow-y-scroll native:overflow-x-hidden native:scrollbar scrollbar-thumb-[#a19fa4] scrollbar-w-1 sm:mx-4 relative"
+         data-controller="">
+        
+
+
+        
+
+
+
+
+
+<div class="native:h-screen native:overflow-visible">
+
+    <div class="native:h-full flex flex-col">
+
+
+            <form method="get" class="bg-white sm:bg-gray-100" data-controller="reveal submit-form" data-reveal-hidden-class="hidden">
+
+                <input type="hidden" data-val="true" data-val-required="The Embedded field is required." id="Embedded" name="Embedded" value="False" />
+
+
+                <div class="flex flex-wrap lg:flex-nowrap gap-4 mb-4 mx-2 sm:mx-0">
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="All" checked="checked" data-val="true" data-val-required="The DateFilter field is required." id="DateFilter" name="DateFilter" />
+                        <span class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">Alles</span>
+                    </label>
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="Today" id="DateFilter" name="DateFilter" />
+                        <span class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">Heute</span>
+                    </label>
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="Tomorrow" id="DateFilter" name="DateFilter" />
+                        <span class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">Morgen</span>
+                    </label>
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="Weekend" id="DateFilter" name="DateFilter" />
+                        <span
+                            class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">Wochenende</span>
+                    </label>
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="Next7Days" id="DateFilter" name="DateFilter" />
+                        <span
+                            class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">7 Tage</span>
+                    </label>
+                    <label class="grow">
+                        <input type="radio" class="hidden peer" data-action="change->submit-form#submit" value="Soon" id="DateFilter" name="DateFilter" />
+                        <span class="peer-checked:bg-primary peer-checked:text-primary-text btn btn-secondary w-full">Demnächst</span>
+                    </label>
+                    <label class="grow" data-action="click->reveal#toggle">
+                        <div class="btn btn-secondary w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                            </svg>
+                            <div class="ml-2">Filter</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="mx-2 sm:mx-0 flex flex-col gap-4 mb-4 hidden pb-4 border-b border-primary"
+                     data-reveal-target="item">
+                    <div class="flex flex-col">
+
+                        <div class="pb-4">
+                            <div class="text-primary font-semibold mb-2">Technik und Ausstattung:</div>
+                            <ul class="flex flex-wrap gap-4">
+                                    <li class="min-w-[9rem]">
+                                        <label>
+                                            <input class="form-radio" type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="Is2D_IsSelected" name="Is2D.IsSelected" value="true" /><input name="Is2D.IsSelected" type="hidden" value="false" />
+                                            <span class="ml-4">2D</span>
+                                        </label>
+                                    </li>
+                                    <li class="min-w-[9rem]">
+                                        <label>
+                                            <input class="form-radio" type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="IsDBox_IsSelected" name="IsDBox.IsSelected" value="true" /><input name="IsDBox.IsSelected" type="hidden" value="false" />
+                                            <span class="ml-4">D-Box</span>
+                                        </label>
+                                    </li>
+                                    <li class="min-w-[9rem]">
+                                        <label>
+                                            <input class="form-radio" type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="IsAtmos_IsSelected" name="IsAtmos.IsSelected" value="true" /><input name="IsAtmos.IsSelected" type="hidden" value="false" />
+                                            <span class="ml-4">Atmos</span>
+                                        </label>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="py-4">
+                            <div class="pb-2 text-primary font-semibold">Saal:</div>
+                            <ul class="flex flex-wrap gap-4">
+                                    <li class="min-w-[9rem]">
+                                        <label class="inline-flex items-center">
+                                            <input class="form-radio" type="checkbox" data-val="true" data-val-required="The Selected field is required." id="Auditoriums_0__Selected" name="Auditoriums[0].Selected" value="true" /><input name="Auditoriums[0].Selected" type="hidden" value="false" />
+                                            <input type="hidden" data-val="true" data-val-required="The AuditoriumId field is required." id="Auditoriums_0__AuditoriumId" name="Auditoriums[0].AuditoriumId" value="1" />
+                                            <div class="ml-4">Kino 1</div>
+                                        </label>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="py-4">
+                            <div class="pb-2 text-primary font-semibold">Filmsuche:</div>
+                            <input class="w-2/3" type="text" id="Title" name="Title" value="" />
+                        </div>
+
+
+                        <div class="pt-4 flex justify-center gap-4">
+                            <button type="submit" class="btn">Übernehmen</button>
+                            <button type="submit" class="btn" name="reset"
+                                    value="True">Zurücksetzen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <ul class="native:overflow-y-scroll sm:overflow-y-visible flex flex-col space-y-4">
+
+
+                    <li id="movie-6027" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Dry Leaf</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6027"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_255.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Drama <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 186 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2025 <br class="mb-2" />
+                                     <b>Darsteller:</b> Giorgi Bochorishvili, Irina Chelidze, Vakhtang Fanchulidze <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">22.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18292">
+                                                        20:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6028" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Die T&#xF6;chter Europas</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6028"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_255.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 80 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2026 <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                                        <a class="btn" target="_blank" href="https://www.youtube.com/watch?v=CnJ_Q2ln5fY">Trailer</a>
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-90 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Heute</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">18.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-80 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18281">
+                                                        18:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">19.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18282">
+                                                        18:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">20.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18283">
+                                                        18:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">21.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18284">
+                                                        18:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6032" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Direct Action</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6032"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_12.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 212 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2024 <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">19.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18299">
+                                                        13:30
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6029" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Ingeborg Bachmann - Jemand, der einmal ich war</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6029"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_6.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 98 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2026 <br class="mb-2" />
+                                     <b>Darsteller:</b> Sandra H&#xFC;ller, Ingeborg Bachmann, Max Frisch <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                                        <a class="btn" target="_blank" href="https://www.youtube.com/watch?v=sdNx8uI3TMc">Trailer</a>
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-90 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Heute</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">18.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-80 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18287">
+                                                        19:30
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">19.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18288">
+                                                        19:30
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">20.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18289">
+                                                        19:30
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">21.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18290">
+                                                        19:30
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">22.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18291">
+                                                        18:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Do</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">23.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18316">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Fr</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">24.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18317">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Sa</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">25.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18318">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">26.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18319">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6031" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Ninja Motherf*cking Destruction</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6031"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_12.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Coming of Age <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 79 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2026 <br class="mb-2" />
+                                     <b>Darsteller:</b> Emma Suthe, Marie Tragousti, Merle von Mach <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-90 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Heute</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">18.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-80 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18295">
+                                                        21:15
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">19.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18296">
+                                                        21:15
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">20.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18297">
+                                                        21:15
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">21.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18298">
+                                                        21:15
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6035" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Saving Spoonie</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6035"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_255.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 87 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2026 <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                                        <a class="btn" target="_blank" href="https://www.youtube.com/watch?v=pnIWT0DSsMs">Trailer</a>
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">26.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18307">
+                                                        16:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">29.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18308">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6036" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">So klingt das Leben</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6036"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_12.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Drama, Kom&#xF6;die <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 113 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2025 <br class="mb-2" />
+                                     <b>Darsteller:</b> Judith Fern&#xE1;ndez, Javier Guti&#xE9;rrez, Mar&#xED;a V&#xE1;zquez <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Do</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">23.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18309">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Fr</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">24.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18310">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Sa</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">25.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18311">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">26.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18312">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">27.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18313">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">28.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18314">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">29.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18315">
+                                                        19:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6034" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">Was haben wir gelacht</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6034"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_12.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 96 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2026 <br class="mb-2" />
+                                     <b>Darsteller:</b> Hella von Sinnen Esther Schweins Maren Kroymann Gaby K&#xF6;ster Bettina B&#xF6;ttinger <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Do</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">23.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18300">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Fr</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">24.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18301">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Sa</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">25.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18302">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">So</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">26.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18303">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">27.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18304">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">28.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18305">
+                                                        17:45
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">29.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18306">
+                                                        16:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="movie-6038" class="bg-white sm:bg-gray-200 scroll-mt-[80px]">
+                        <div class="grid grid-cols-[1fr_2fr] grid-rows-[auto_auto_auto_1fr] gap-2 sm:grid-cols-2 sm:grid-rows-[auto_auto_auto_auto] p-2 bg-white sm:bg-gray-200 max-w-screen-lg">
+                            <div
+                                class="mb-2 sm:mb-0 sm:mt-4 text-center sm:text-left col-start-1 col-span-2 sm:col-auto text-xl sm:text-3xl font-bold text-primary">We Are Making a Film About Mark Fisher</div>
+                            <div class="sm:p-4 sm:order-first sm:row-span-4">
+                                <img class="sm:w-4/5 lg:w-3/5 h-44 sm:h-auto"
+                                     src="/frankfurt_malsehn/assets/poster?movieId=6038"
+                                     alt="movie poster">
+                            </div>
+
+                            <div class="order-4 sm:order-none flex flex-wrap items-center gap-2">
+                                <div class="bg-primary text-white font-bold rounded"
+                                     style="padding: 0.2em 0.6em 0.3em">2D</div>
+                                    <img class="h-10 bg-white rounded" src="/img/fsk/FSK_6.svg" alt="FSK" />
+                            </div>
+
+
+                            <p class="order-10 sm:order-none col-span-2 sm:col-auto sm:row-span-2">
+                                     <b>Genre:</b> Special Event, Dokumentarfilm <br class="mb-2" />
+                                     <b>Laufzeit:</b> ca. 96 Minuten <br class="mb-2" />
+                                     <b>Produktion:</b> 2025 <br class="mb-2" />
+                                     <b>Darsteller:</b> Justin Hopper <br class="mb-2" />
+                                <span class="mt-2 flex space-x-2">
+                    </span>
+                            </p>
+
+                            <ul class="row-span-3 sm:row-auto sm:col-span-2 flex flex-col sm:flex-row flex-wrap">
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mo</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">27.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18320">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Di</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">28.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18321">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                                    <li class="sm:border-r-2 mb-2 flex sm:flex-col">
+
+                                        <div
+                                            class="w-14 mr-1 sm:mr-0 shrink-0 sm:w-24 sm:h-12 sm:p-10 border border-primary sm:border-0 sm:border-b-2 sm:border-gray-200 text-primary sm:text-primary-text sm:bg-primary bg-opacity-70 sm:bg-opacity-70 flex flex-col justify-center items-center sm:self-stretch ">
+                                            <div class="leading-4 sm:leading-none font-bold">Mi</div>
+                                            <div
+                                                class="leading-4 sm:leading-none">29.07.</div>
+                                        </div>
+
+
+                                        <div class="flex flex-wrap gap-2 sm:block sm:w-24">
+                                                    <a class="sm:underline sm:p-2.5 w-11 h-11 sm:w-auto sm:h-auto sm:py-4 text-primary text-primary-text bg-primary sm:text-primary-text sm:bg-primary sm:bg-opacity-50 flex justify-center items-center hover:bg-primary sm:border-b-2" href="/frankfurt_malsehn/booking/18322">
+                                                        22:00
+                                                    </a>
+                                        </div>
+
+                                    </li>
+                            </ul>
+
+                            <div class="order-12 sm:order-none sm:block col-span-2">
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+
+
+    </div>
+
+</div>
+
+    </div>
+
+</main>
+
+
+
+    <footer class="print:hidden mt-4 text-center text-xs mb-4">
+        <div class="">
+            &copy; 2026 - kinotickets.express - <a class="underline" href="/docs/about">Impressum</a>
+            - <a class="underline" href="/docs/toc">Allgemeinen Geschäftsbedingungen</a>
+                -
+                <a class="underline" href="/docs/privacy">Datenschutzerklärung</a>
+            - <a class="underline" href="/docs/bfsg">Barrierefreiheit</a>
+            - <a class="underline" href="/frankfurt_malsehn/vouchers/cancel">Vertrag widerrufen</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
