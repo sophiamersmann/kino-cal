@@ -13,7 +13,7 @@ function subscribePage(counts: { name: string; file: string; events: number }[])
   const rows = counts
     .map(({ name, file, events }) => {
       const webcal = `webcal://${host}${new URL(PAGES_BASE_URL).pathname}/${file}`;
-      return `<li><a href="${webcal}">${name}</a> — ${events} Vorstellungen (<a href="${file}" download>.ics</a>)</li>`;
+      return `<li><a href="${webcal}">${name}</a> — ${events} Vorstellungen</li>`;
     })
     .join("\n      ");
   return `<!doctype html>
