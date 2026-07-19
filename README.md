@@ -12,6 +12,7 @@ Programmkinos — ein Kalender pro Kino.
 | `eldorado.ics` | Eldorado | arthouse-kinos.de |
 | `dff.ics` | Kino des DFF | dff.film |
 | `malsehn.ics` | Mal Seh'n | malsehnkino.de + kinotickets.express |
+| `orfeos.ics` | Orfeos Erben | eventfrog.de |
 
 ## Wie es funktioniert
 
@@ -28,11 +29,14 @@ Je nach Kino heißt das:
 - **Mal Seh'n**: zeigt ohnehin nur Originalfassungen — alles außer Kinderkino
   kommt rein. Buchungslinks und Titel kommen von kinotickets.express
   (Wochenprogramm und Tickets werden per Datum + Uhrzeit gematcht).
+- **Orfeos Erben**: Programm läuft komplett über Eventfrog (schema.org-Daten
+  der Event-Seiten); keine Sprachinfos verfügbar, daher kommt alles rein —
+  inklusive der Cinéma-&-Diner-Events.
 
 Events haben stabile UIDs (IDs der Ticketsysteme), sodass Abonnenten bei jeder
 Regenerierung Updates statt Duplikate bekommen. Vorstellungen erscheinen so weit
 im Voraus, wie die Kinos sie veröffentlichen (Arthouse: rollende Woche plus
-Specials, DFF: ~6 Wochen, Mal Seh'n: aktuelle Woche).
+Specials, DFF: ~6 Wochen, Mal Seh'n: aktuelle Woche, Orfeos: aktueller Filmlauf).
 
 ## Entwicklung
 

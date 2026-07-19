@@ -44,6 +44,13 @@ export const CINEMAS: Cinema[] = [
     icsFile: "malsehn.ics",
     calendarName: "Mal Seh'n (OV/OmU)",
   },
+  {
+    id: "orfeos",
+    name: "Orfeos Erben",
+    address: "Hamburger Allee 45, 60486 Frankfurt am Main",
+    icsFile: "orfeos.ics",
+    calendarName: "Orfeos Erben (Kino)",
+  },
 ];
 
 export function cinemaById(id: string): Cinema {
@@ -62,5 +69,8 @@ export const MALSEHN_BASE_URL = "https://malsehnkino.de";
 export const MALSEHN_WEEK_URL = `${MALSEHN_BASE_URL}/index.php?section=week`;
 export const MALSEHN_KINDERKINO_URL = `${MALSEHN_BASE_URL}/index.php?section=Kinderkino`;
 export const MALSEHN_TICKETS_URL = "https://kinotickets.express/frankfurt_malsehn";
+
+export const ORFEOS_LOCATION_URL =
+  "https://eventfrog.de/de/locations/Orfeos-Erben-6910236197197927686.html";
 
 export const PAGES_BASE_URL = "https://sophiamersmann.github.io/kino-cal";

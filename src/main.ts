@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { scrapeArthouse } from "./cinemas/arthouse.js";
 import { scrapeDff } from "./cinemas/dff.js";
 import { scrapeMalsehn } from "./cinemas/malsehn.js";
+import { scrapeOrfeos } from "./cinemas/orfeos.js";
 import { CINEMAS, PAGES_BASE_URL } from "./config.js";
 import { filterScreenings } from "./filter.js";
 import { toIcs } from "./ics.js";
@@ -43,6 +44,7 @@ async function main() {
     { name: "arthouse-kinos.de", scrape: scrapeArthouse },
     { name: "dff.film", scrape: scrapeDff },
     { name: "malsehnkino.de", scrape: scrapeMalsehn },
+    { name: "orfeos (eventfrog.de)", scrape: scrapeOrfeos },
   ];
 
   console.log(`Scraping ${sources.map((s) => s.name).join(", ")} …`);

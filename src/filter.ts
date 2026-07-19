@@ -35,10 +35,12 @@ export const includeAll: Predicate = () => true;
 /**
  * Per-cinema overrides. Mal Seh'n shows everything in OV/OmU but rarely
  * annotates the language, so the default untagged-foreign-film exclusion
- * would wrongly drop subtitled originals there.
+ * would wrongly drop subtitled originals there. Orfeos Erben (via
+ * Eventfrog) has no language metadata at all.
  */
 const CINEMA_FILTERS: Record<string, Predicate> = {
   malsehn: includeAll,
+  orfeos: includeAll,
 };
 
 export const selectionFilter: Predicate = (s) =>
