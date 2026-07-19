@@ -23,7 +23,7 @@ describe("parseDffProgramme", () => {
     // From the fixture: Bashu, der kleine Fremde, 2026-07-18 18:00, OmU
     const s = screenings.find((x) => x.showId === "dff-3564471067");
     expect(s).toBeDefined();
-    expect(s!.title).toBe("Bashu, der kleine Fremde");
+    expect(s!.title).toBe("BASHU, GHARIBEYE KOOCHAK");
     expect(s!.cinema).toBe("dff");
     expect(s!.language).toBe("OmU");
     expect(s!.country).toBe("Iran");

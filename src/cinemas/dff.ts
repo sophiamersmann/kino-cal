@@ -46,9 +46,10 @@ export function parseDffProgramme(html: string): Screening[] {
       // Skip children's programme
       if (/Filmreihe:\s*Kinderkino/i.test(infoText)) return;
 
-      // German display title in <strong>, all-caps original title in <h4>
-      const originalTitle = dataset.find("h4").first().text().trim();
-      const title = info.find("strong").first().text().trim() || originalTitle;
+      // All-caps original title in <h4>; the <strong> German title would
+      // mislabel foreign films, so it's only a fallback
+      const title =
+        dataset.find("h4").first().text().trim() || info.find("strong").first().text().trim();
       if (!title) return;
 
       // "Zur Filmreihe/Veranstaltung" link, when the screening belongs to one
